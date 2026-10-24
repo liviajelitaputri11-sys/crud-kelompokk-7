@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\KendaraanController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Kendaraan;
 
 class KendaraanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+   
     public function index()
     {
-        $kendaraans = Kendaraan::latest()->get();
+        $kendaraans = Kendaraan::all();
 
         return view('kendaraan.index', compact('kendaraans'));
     }
