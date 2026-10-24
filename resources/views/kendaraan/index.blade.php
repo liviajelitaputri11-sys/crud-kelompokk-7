@@ -17,6 +17,7 @@
             <th>Kategori</th>
             <th>Tahun</th>
             <th>Warna</th>
+            <th>keterangan</th>
             <th>Aksi</th>
         </tr>
 
@@ -30,6 +31,8 @@
             <td>{{ $kendaraan->kategori }}</td>
             <td>{{ $kendaraan->tahun }}</td>
             <td>{{ $kendaraan->warna }}</td>
+            <td>{{ $kendaraan->keterangan }}</td>
+
             <td>
     <a href="{{ route('kendaraan.edit', $kendaraan->id) }}">Edit</a>
 </td>
