@@ -5,6 +5,8 @@
 </head>
 <body>
     <h1>Daftar Kendaraan</h1>
+    <a href="{{ route('kendaraan.create') }}">Tambah Kendaraan</a>
+<br><br>
 
     <table border="1">
         <tr>
