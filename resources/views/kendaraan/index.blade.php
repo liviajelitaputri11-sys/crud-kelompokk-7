@@ -33,6 +33,17 @@
             <td>
     <a href="{{ route('kendaraan.edit', $kendaraan->id) }}">Edit</a>
 </td>
+<td>
+    <form action="{{ route('kendaraan.destroy', $kendaraan->id) }}"
+          method="POST" style="display:inline;">
+        @csrf
+        @method('DELETE')
+        <button type="submit"
+                onclick="return confirm('Yakin ingin menghapus kendaraan ini?')">
+            Hapus
+        </button>
+    </form>
+</td>
         </tr>
         @endforeach
     </table>
