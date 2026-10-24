@@ -2,6 +2,11 @@
 <html>
 <head>
     <title>Daftar Kendaraan</title>
+    <style>
+    th {
+        background-color: pink;
+    }
+</style>
 </head>
 <body>
     <h1>Daftar Kendaraan</h1>
@@ -32,11 +37,11 @@
             <td>{{ $kendaraan->tahun }}</td>
             <td>{{ $kendaraan->warna }}</td>
             <td>{{ $kendaraan->keterangan }}</td>
-
-            <td>
+            
+             <td>
+                
     <a href="{{ route('kendaraan.edit', $kendaraan->id) }}">Edit</a>
-</td>
-<td>
+
     <form action="{{ route('kendaraan.destroy', $kendaraan->id) }}"
           method="POST" style="display:inline;">
         @csrf

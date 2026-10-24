@@ -17,7 +17,7 @@ protected $model = Kendaraan::class;
             'kategori' => fake()->randomElement(['Mobil', 'Motor']),
             'tahun' => fake()->numberBetween(2015, 2026),
             'warna' => fake()->randomElement(['Hitam', 'Putih', 'Merah', 'Biru', 'Silver']),
-            'keterangan' => fake()->optional()->sentence(),
+            'keterangan' => null,
         ];
     }
 }
