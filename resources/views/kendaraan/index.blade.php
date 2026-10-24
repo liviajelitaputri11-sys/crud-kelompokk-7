@@ -17,9 +17,11 @@
             <th>Kategori</th>
             <th>Tahun</th>
             <th>Warna</th>
+            <th>Aksi</th>
         </tr>
 
         @foreach ($kendaraans as $kendaraan)
+       
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $kendaraan->nomor_polisi }}</td>
@@ -28,6 +30,9 @@
             <td>{{ $kendaraan->kategori }}</td>
             <td>{{ $kendaraan->tahun }}</td>
             <td>{{ $kendaraan->warna }}</td>
+            <td>
+    <a href="{{ route('kendaraan.edit', $kendaraan->id) }}">Edit</a>
+</td>
         </tr>
         @endforeach
     </table>
